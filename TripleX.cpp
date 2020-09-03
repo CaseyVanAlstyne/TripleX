@@ -7,9 +7,9 @@ int main()
 {
     std::cout << std::endl;
 
-    std::cout << "You are a secret agent for the United States of America breaking into a secure Russian server room in order to secure highly classified intelligence regarding a likely nuclear attack...";
+    std::cout << "You are a secret agent for the Central Intelligence Agency (CIA) breaking into a secure Russian server room in order to obtain highly classified intelligence regarding a likely nuclear attack...";
     std::cout << std::endl;
-    std::cout << "In order to continue without being apprehended, you must enter the correct codes...";
+    std::cout << "In order to continue without being apprehended by Russian Agents, you must enter the correct codes.";
     std::cout << std::endl;
     // the above lines are known as expression statements
     // an expression (myVariable = 5; for instance) followed by a semicolon is an expression statement
@@ -18,22 +18,23 @@ int main()
     // the :: is the scope operator
     // cout allows us to write to the terminal and the << tells the compiler to write everything to the right (or what's in the string)
 
-    const int a = 1;
-    const int b = 3;
-    const int c = 6;
+    const int CodeA = 1;
+    const int CodeB = 3;
+    const int CodeC = 5;
 
-    const int sum = a + b + c;
-    const int product = a * b * c;
+    const int CodeSum = CodeA + CodeB + CodeC;
+    const int CodeProduct = CodeA * CodeB * CodeC;
     // lines that declare variables are declaration statements, which is simply code that declares something (variables in the above cases)
     // You have to declare a variable to assign it a value. You cannot assign a value to a variable before the variable has been declared.
     std::cout << std::endl;
 
     std::cout << "- There are three numbers in the code." << std::endl;
-    std::cout << "- The codes add up to: " << sum << std::endl;
-    std::cout << "- The codes multiply to give: " << product << std::endl;
+    std::cout << "- The codes add up to: " << CodeSum << std::endl;
+    std::cout << "- The codes multiply to give: " << CodeProduct << std::endl;
 
     std::cout << std::endl;
 
+    int PlayerGuess;
 
     return 0;
 }
