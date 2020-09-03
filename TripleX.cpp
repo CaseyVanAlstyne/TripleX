@@ -6,7 +6,6 @@
 int main()
 {
     std::cout << std::endl;
-
     std::cout << "You are a secret agent for the Central Intelligence Agency (CIA) breaking into a secure Russian server room in order to obtain highly classified intelligence regarding a likely nuclear attack...";
     std::cout << std::endl;
     std::cout << "In order to continue without being apprehended by Russian Agents, you must enter the correct codes.";
@@ -17,24 +16,36 @@ int main()
     // std is in the position of the Namespace (which is used to avoid naming conflicts and collisions)
     // the :: is the scope operator
     // cout allows us to write to the terminal and the << tells the compiler to write everything to the right (or what's in the string)
+    // cout stands for Character Output
+    // the << is known as the insertion output
+    // cin stands for character input; and the >> is known as the extraction operator
 
     const int CodeA = 1;
     const int CodeB = 3;
     const int CodeC = 5;
-
     const int CodeSum = CodeA + CodeB + CodeC;
     const int CodeProduct = CodeA * CodeB * CodeC;
     // lines that declare variables are declaration statements, which is simply code that declares something (variables in the above cases)
     // You have to declare a variable to assign it a value. You cannot assign a value to a variable before the variable has been declared.
-    std::cout << std::endl;
 
+    std::cout << std::endl;
     std::cout << "- There are three numbers in the code." << std::endl;
     std::cout << "- The codes add up to: " << CodeSum << std::endl;
     std::cout << "- The codes multiply to give: " << CodeProduct << std::endl;
-
     std::cout << std::endl;
 
-    int PlayerGuess;
+    int GuessA, GuessB, GuessC;
+    std::cin >> GuessA;
+    std::cin >> GuessB;
+    std::cin >> GuessC;
+    std::cout << std::endl;
+
+    int GuessSum = GuessA + GuessB + GuessC;
+    int GuessProduct = GuessA * GuessB * GuessC;
+
+    std::cout << "- Your guesses add up to: " << GuessSum << std::endl;
+    std::cout << "- Your guesses multiply to give: " << GuessProduct << std::endl;
+    std::cout << std::endl;
 
     return 0;
 }
