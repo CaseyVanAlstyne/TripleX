@@ -5,17 +5,18 @@
 
 int main()
 {
-    std::cout << "You are a secret agent for the United States of America breaking into a secure Russian server room to secure highly classified intelligence regarding a likely nuclear attack...";
-    std::cout << std::endl;
-    std::cout << "In order to continue, you must enter the correct codes...";
     std::cout << std::endl;
 
-    // the above line is known as an expression statement
+    std::cout << "You are a secret agent for the United States of America breaking into a secure Russian server room in order to secure highly classified intelligence regarding a likely nuclear attack...";
+    std::cout << std::endl;
+    std::cout << "In order to continue without being apprehended, you must enter the correct codes...";
+    std::cout << std::endl;
+    // the above lines are known as expression statements
+    // an expression (myVariable = 5; for instance) followed by a semicolon is an expression statement
     // std is short for "Standard"
     // std is in the position of the Namespace (which is used to avoid naming conflicts and collisions)
     // the :: is the scope operator
     // cout allows us to write to the terminal and the << tells the compiler to write everything to the right (or what's in the string)
-
 
     const int a = 1;
     const int b = 3;
@@ -23,11 +24,16 @@ int main()
 
     const int sum = a + b + c;
     const int product = a * b * c;
-
+    // lines that declare variables are declaration statements, which is simply code that declares something (variables in the above cases)
     // You have to declare a variable to assign it a value. You cannot assign a value to a variable before the variable has been declared.
+    std::cout << std::endl;
 
-    std::cout << sum << std::endl;
-    std::cout << product << std::endl;
+    std::cout << "- There are three numbers in the code." << std::endl;
+    std::cout << "- The codes add up to: " << sum << std::endl;
+    std::cout << "- The codes multiply to give: " << product << std::endl;
+
+    std::cout << std::endl;
+
 
     return 0;
 }
