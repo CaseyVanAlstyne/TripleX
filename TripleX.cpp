@@ -1,4 +1,5 @@
 #include <iostream>
+#include <ctime>
 // the above #include represents a preprocessor directive in the code, which are instructions to the compiler to, in this case, inlcude the <iostream> library into the code BEFORE compiling, which is why it can be found at the very start of our code file.
 // <iostream> is the header file
 // preprocessor directives do not need to end with a semicolon
@@ -23,9 +24,9 @@ void PrintIntroduction(int Difficulty) {
 bool PlayGame(int Difficulty) {
     PrintIntroduction(Difficulty);
 
-    const int CodeA = rand();
-    const int CodeB = rand();
-    const int CodeC = rand();
+    const int CodeA = rand() % Difficulty + Difficulty;
+    const int CodeB = rand() % Difficulty + Difficulty;
+    const int CodeC = rand() % Difficulty + Difficulty;
     const int CodeSum = CodeA + CodeB + CodeC;
     const int CodeProduct = CodeA * CodeB * CodeC;
     // lines that declare variables are declaration statements, which is simply code that declares something (variables in the above cases)
@@ -55,16 +56,15 @@ bool PlayGame(int Difficulty) {
         std::cout << "You have succesfully extracted a file. Keep going!\n";
         return true;
     } else {
-        // std::cout << "You entered the wrong code, Agent. Try again!\n";
-        std::cout << "A deafening siren sounds seconds before heavily-armed agents storm the room in which you are standing.\n";
-        std::cout << "'Ruki vverkh,' they scream, as they aim their AK-47s at your person.\n";
-        std::cout << "Game Over!\n";
+        std::cout << "You entered the wrong code, Agent. Try again!\n";
         return false;
         }
     std::cout << std::endl;
 }
 
 int main() {
+    srand(time(NULL));
+
     int LevelDifficulty = 1;
     const int MaxDifficulty = 4; 
 
@@ -80,6 +80,10 @@ int main() {
         
     }
     std::cout << "You got all of the files, Agent. Congratulations on defeating the Russians! Now get out of there! \n";
+    std::cout << "Suddenly, you hear movement in the next room. You quickly scurry to the open window and ready your hang-glider.\n";
+    std::cout << "As you get ready to jump, a deafening siren sounds seconds before heavily-armed agents storm the other side of the room in which you are standing.\n";
+    std::cout << "'Ruki vverkh,' they scream, as they aim their AK-47s at you.\n";
+    std::cout << "It's too late; you're already gliding to safety!\n\n";
 
     return 0;
 }
