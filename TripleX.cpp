@@ -3,13 +3,12 @@
 // <iostream> is the header file
 // preprocessor directives do not need to end with a semicolon
 
-int main()
+void PrintIntroduction()
 {
     std::cout << std::endl;
-    std::cout << "You are a secret agent for the Central Intelligence Agency (CIA) breaking into a secure Russian server room in order to obtain highly classified intelligence regarding a likely nuclear attack...";
-    std::cout << std::endl;
-    std::cout << "In order to continue without being apprehended by Russian Agents, you must enter the correct code.";
-    std::cout << std::endl;
+    std::cout << "You are a secret agent for the Central Intelligence Agency (CIA) breaking into a secure Russian server room in order to obtain highly classified intelligence regarding a likely nuclear attack...\n";
+    std::cout << "In order to continue without being apprehended by Russian Agents, you must enter the correct code.\n";
+
     // the above lines are known as expression statements
     // an expression (myVariable = 5; for instance) followed by a semicolon is an expression statement
     // std is short for "Standard"
@@ -19,6 +18,11 @@ int main()
     // cout stands for Character Output
     // the << is known as the insertion output
     // cin stands for character input; and the >> is known as the extraction operator
+}
+
+void PlayGame()
+{
+    PrintIntroduction();
 
     const int CodeA = 1;
     const int CodeB = 3;
@@ -29,42 +33,39 @@ int main()
     // You have to declare a variable to assign it a value. You cannot assign a value to a variable before the variable has been declared.
 
     std::cout << std::endl;
-    std::cout << "- There are three numbers in the code." << std::endl;
-    std::cout << "- The codes add up to: " << CodeSum << std::endl;
-    std::cout << "- The codes multiply to give: " << CodeProduct << std::endl;
+    std::cout << "- There are three numbers in the code.\n";
+    std::cout << "- The codes add up to: " << CodeSum;
+    std::cout << "\n- The codes multiply to give: " << CodeProduct << std::endl;
     std::cout << std::endl;
 
+    // Store player guess
     int GuessA, GuessB, GuessC;
-    std::cin >> GuessA;
-    std::cin >> GuessB;
-    std::cin >> GuessC;
+    std::cin >> GuessA >> GuessB >> GuessC;
     std::cout << std::endl;
 
     int GuessSum = GuessA + GuessB + GuessC;
     int GuessProduct = GuessA * GuessB * GuessC;
 
-    std::cout << "- Your guesses add up to: " << GuessSum << std::endl;
-    std::cout << "- Your guesses multiply to give: " << GuessProduct << std::endl;
+    std::cout << "- Your guesses add up to: " << GuessSum;
+    std::cout << "\n- Your guesses multiply to give: " << GuessProduct << std::endl;
     std::cout << std::endl;
 
+    // Check to see if player's guess is correct
     if (GuessSum == CodeSum && GuessProduct == CodeProduct)
-    {
-        std::cout << "You have succesfully infiltrated the server.";
-                   std::cout << std::endl;
-        std::cout << "Good work, Comrade!";
-    } else
-    {
-       std::cout << "A deafening siren sounds seconds before heavily-armed agents storm the room in which you are standing.";
-           std::cout << std::endl;
-
-       std::cout << "'Ruki vverkh,' they scream, as they aim their AK-47s at your person.";
-           std::cout << std::endl;
-
-       std::cout << "Game Over!";
-           std::cout << std::endl;
-    }
-
+        {
+            std::cout << "You have succesfully infiltrated the server.\n";
+            std::cout << "Good work, Comrade!\n";
+        } else
+        {
+            std::cout << "A deafening siren sounds seconds before heavily-armed agents storm the room in which you are standing.\n";
+            std::cout << "'Ruki vverkh,' they scream, as they aim their AK-47s at your person.\n";
+            std::cout << "Game Over!\n";
+        }
     std::cout << std::endl;
+}
 
+int main()
+{
+    PlayGame();
     return 0;
 }
